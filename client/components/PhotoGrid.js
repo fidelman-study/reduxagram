@@ -4,12 +4,13 @@
  * 19:33
  */
 import React, { Component, PropTypes } from 'react';
+import Photo from './Photo';
 
 class PhotoGrid extends Component {
     render() {
         return (
             <div className="photo-grid">
-                i'm photogrid
+                {this.props.posts.map((post, i) => <Photo />)}
             </div>
         );
     };

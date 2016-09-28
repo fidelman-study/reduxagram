@@ -18,7 +18,7 @@ import store, { history } from './store';
 
 const router = (
     <Router history={history}>
-        <Route path="/" component={Main}>
+        <Route path="/" component={App}>
             <IndexRoute component={PhotoGrid} />
             <Route path ="/view/:postId" component={Single} />
         </Route>
