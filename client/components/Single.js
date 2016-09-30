@@ -5,6 +5,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import Photo from './Photo';
+import Comments from './Comments';
 
 class Single extends Component {
     render() {
@@ -19,6 +20,7 @@ class Single extends Component {
         return (
             <div className="single-photo">
                 <Photo i={i} post={post} {...this.props} />
+                <Comments postComments={postComments} {...this.props} />
             </div>
         );
     };
