@@ -11,7 +11,11 @@ import posts from './data/posts';
 import comments from './data/comments';
 
 const defaultState = {posts, comments};
-const store = createStore(reducer, defaultState);
+const enhancement = compose(
+    window.devToolsExtension && window.devToolsExtension()
+);
+
+const store = createStore(reducer, defaultState, enhancement);
 window.store = store;
 
 export const history = syncHistoryWithStore(browserHistory, store);
